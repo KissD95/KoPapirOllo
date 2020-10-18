@@ -186,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void ujJatek() {
         dontetlenekSzama=0;
+        dontetlenek.setText("Döntetlenek száma: "+dontetlenekSzama);
         sajatElet=3;
         gepElet=3;
         imageSajatValasz.setImageResource(0);

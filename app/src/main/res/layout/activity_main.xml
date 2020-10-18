@@ -16,7 +16,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:layout_marginTop="20sp"
-        android:layout_marginHorizontal="20sp">
+        android:layout_marginHorizontal="10sp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,14 +49,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/gepNev"
                     android:textSize="30sp"
-                    android:layout_marginLeft="10dp"/>
+                    />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/te"
                 android:textSize="30sp"
-                android:layout_marginRight="10dp"/>
+                />
             <ImageView
                 android:id="@+id/sajatHp1"
                 android:layout_width="40dp"
