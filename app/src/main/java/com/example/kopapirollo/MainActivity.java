@@ -2,6 +2,8 @@ package com.example.kopapirollo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,17 +21,15 @@ public class MainActivity extends AppCompatActivity {
     private TextView dontetlenek;
     private int sajatElet,gepElet,sajatValasz,gepValasz,dontetlenekSzama;
     private Random rand=new Random();
+    private AlertDialog.Builder builder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        Gombok();
+        ujJatek();
 
-
-    }
-
-    private void Gombok() {
         btnRock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,11 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 KiNyert();
             }
         });
-        GepValaszVizsgal();
-        KiNyert();
+
+
     }
-
-
     private void KiNyert(){
         if (gepValasz == sajatValasz){
             Toast.makeText(MainActivity.this,"Döntetlen",Toast.LENGTH_SHORT).show();
@@ -93,6 +91,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+
+
+
     private void GepValaszVizsgal() {
         if (gepValasz==1){
             imageGepValasz.setImageResource(R.drawable.rock);
@@ -120,9 +122,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         sajatElet--;
-        /*if (sajatElet < 1){
-            builder.setTitle("Vesztettél").create().show();
-        }*/
+        if (sajatElet < 1){
+            builder.setTitle("Vereség").create().show();
+            AlertDialog dialog = builder.create();
+
+        }
     }
 
     private void GepEletLevon() {
@@ -142,12 +146,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         gepElet--;
-       /* if (gepElet < 1){
-            builder.setTitle("Vesztettél").create().show();
-        }*/
+        if (gepElet < 1){
+            builder.setTitle("Győzelem").create().show();
+            AlertDialog dialog = builder.create();
+
+        }
     }
 
     private void init() {
+
         sajatElet=3;
         gepElet=3;
         gepHp1=findViewById(R.id.gepHp1);
@@ -162,5 +169,33 @@ public class MainActivity extends AppCompatActivity {
         btnPaper=findViewById(R.id.btnPaper);
         btnScissor=findViewById(R.id.btnScissor);
         dontetlenek=findViewById(R.id.dontetlenSzam);
+        builder=new AlertDialog.Builder(MainActivity.this);
+        builder.setCancelable(false).setMessage("Szeretne új játékot játszani?")
+                .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ujJatek();
+                    }
+                })
+                .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+    }
+    private void ujJatek() {
+        dontetlenekSzama=0;
+        sajatElet=3;
+        gepElet=3;
+        imageSajatValasz.setImageResource(0);
+        imageGepValasz.setImageResource(0);
+        gepHp1.setImageResource(R.drawable.heart2);
+        gepHp2.setImageResource(R.drawable.heart2);
+        gepHp3.setImageResource(R.drawable.heart2);
+        sajatHp1.setImageResource(R.drawable.heart2);
+        sajatHp2.setImageResource(R.drawable.heart2);
+        sajatHp3.setImageResource(R.drawable.heart2);
+
     }
 }
