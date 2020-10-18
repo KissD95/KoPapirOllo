@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+               <ImageView
+                   android:id="@+id/gepHp1"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:src="@drawable/heart2"/>
+                <ImageView
+                    android:id="@+id/gepHp2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/heart2"/>
+                <ImageView
+                    android:id="@+id/gepHp3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/heart2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gepNev"
+                    android:textSize="30sp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/te"
+                android:textSize="30sp"/>
+            <ImageView
+                android:id="@+id/sajatHp1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/heart2"/>
+            <ImageView
+                android:id="@+id/sajatHp2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/heart2"/>
+            <ImageView
+                android:id="@+id/sajatHp3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/heart2"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Döntetlenek száma: "
+            android:textSize="30sp"
+            android:layout_marginVertical="10sp"
+            android:id="@+id/dontetlenSzam"/>
+
+        <ImageView
+            android:id="@+id/image_sajatValasz"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/paper" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/sajatValaszSzoveg"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/image_gepValasz"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rock" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/gepValaszSzoveg"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <Button
+                android:id="@+id/btnRock"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rock"/>
+            <Button
+                android:id="@+id/btnPaper"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/paper"/>
+            <Button
+                android:id="@+id/btnScissor"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/scissors"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

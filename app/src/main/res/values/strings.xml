@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KoPapirOllo</string>
+    <string name="sajatValaszSzoveg">A te választásod</string>
+    <string name="gepValaszSzoveg">A gép választása</string>
+    <string name="gepNev">Gép</string>
+    <string name="te">Te</string>
+</resources>
