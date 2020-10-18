@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/backgroundColor">
 
     
 
@@ -31,7 +32,8 @@
                    android:id="@+id/gepHp1"
                    android:layout_width="40dp"
                    android:layout_height="40dp"
-                   android:src="@drawable/heart2"/>
+                   android:src="@drawable/heart2"
+                   />
                 <ImageView
                     android:id="@+id/gepHp2"
                     android:layout_width="40dp"
@@ -46,13 +48,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gepNev"
-                    android:textSize="30sp"/>
+                    android:textSize="30sp"
+                    android:layout_marginLeft="10dp"/>
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/te"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:layout_marginRight="10dp"/>
             <ImageView
                 android:id="@+id/sajatHp1"
                 android:layout_width="40dp"
@@ -82,8 +86,7 @@
         <ImageView
             android:id="@+id/image_sajatValasz"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/paper" />
+            android:layout_height="100dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -95,8 +98,7 @@
         <ImageView
             android:id="@+id/image_gepValasz"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/rock" />
+            android:layout_height="100dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -124,7 +126,8 @@
                 android:id="@+id/btnScissor"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/scissors"/>
+                android:background="@drawable/scissors"
+                />
         </LinearLayout>
 
     </LinearLayout>
